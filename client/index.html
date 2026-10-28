@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Play Chess Online — Chess Club 88</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1><span aria-hidden="true">♟</span> Chess Club <span class="brand-online">ONLINE</span><span class="sr-only">Complete Chess Game Standard 88</span></h1>
+  </header>
+  <main>
+    <section id="main-menu" class="panel">
+      <div class="home-intro">
+        <p class="home-eyebrow">PLAY • LEARN • CONNECT</p>
+        <div class="menu-title">Play Chess Online</div>
+        <div class="menu-subtitle">Find your next great game, sharpen your skills, and follow chess live.</div>
+        <div class="home-product-label">Chess Club 88 · Free local and online play</div>
+      </div>
+      <section class="home-feature-group" aria-labelledby="play-heading">
+        <h2 id="play-heading" class="home-section-title">Play chess your way</h2>
+        <div class="menu-buttons" aria-label="Chess game modes and features">
+        <button id="home-online-play-btn" class="menu-btn primary" type="button">Play Online</button>
+        <button id="new-game-btn" class="menu-btn secondary" type="button">Play a Local Game</button>
+        <button id="resume-game-btn" class="menu-btn secondary" type="button">▶ Resume Saved Game</button>
+        <button id="stats-btn" class="menu-btn accent" type="button">📊 Statistics</button>
+        <button id="profile-btn" class="menu-btn secondary" type="button">👤 Profile & Rating</button>
+        <button id="replays-btn" class="menu-btn secondary" type="button">🎞 Replays &amp; Share</button>
+        <button id="friends-btn" class="menu-btn secondary" type="button">👥 Friends</button>
+        <button id="leaderboard-btn" class="menu-btn secondary" type="button">🏆 Leaderboard</button>
+        <button id="puzzle-btn" class="menu-btn secondary" type="button">🧩 Daily Puzzle</button>
+        <button id="training-btn" class="menu-btn secondary" type="button">🎯 Training</button>
+        <button id="analysis-btn" class="menu-btn secondary" type="button">🔍 Analysis</button>
+        <button id="opening-explorer-btn" class="menu-btn secondary" type="button">♟ Opening Explorer</button>
+        <button id="achievements-btn" class="menu-btn secondary" type="button">🏆 Achievements</button>
+        <button id="online-btn" class="menu-btn accent" type="button">🌐 Online Multiplayer</button>
+        <button id="spectate-btn" class="menu-btn secondary" type="button">Watch Live Games</button>
+        <button id="smart-review-btn" class="menu-btn secondary" type="button">Review Last Game</button>
+        <button id="tournament-btn" class="menu-btn accent" type="button">🏆 Tournament</button>
+        <button id="settings-btn" class="menu-btn secondary" type="button">⚙️ Settings</button>
+        </div>
+      </section>
+      <section class="home-feature-group" aria-labelledby="learn-heading">
+        <h2 id="learn-heading" class="home-section-title">Learn and improve</h2>
+        <div class="home-discovery-grid">
+          <button id="home-lessons-btn" class="home-discovery-card" type="button" data-target="training">
+            <span class="discovery-icon" aria-hidden="true">♘</span><span><strong>Chess lessons</strong><small>Build skills with guided training exercises.</small></span>
+          </button>
+          <button id="home-bots-btn" class="home-discovery-card" type="button" data-target="setup">
+            <span class="discovery-icon" aria-hidden="true">♟</span><span><strong>Play chess bots</strong><small>Choose a difficulty and challenge the computer.</small></span>
+          </button>
+          <button id="home-puzzles-btn" class="home-discovery-card" type="button" data-target="puzzles">
+            <span class="discovery-icon" aria-hidden="true">◇</span><span><strong>Chess puzzles</strong><small>Practice tactics with the daily puzzle.</small></span>
+          </button>
+        </div>
+      </section>
+      <section class="home-feature-group" aria-labelledby="watch-heading">
+        <h2 id="watch-heading" class="home-section-title">Follow the game</h2>
+        <div class="home-discovery-grid">
+          <button id="home-events-btn" class="home-discovery-card" type="button" data-target="spectator">
+            <span class="discovery-icon" aria-hidden="true">◉</span><span><strong>Live chess</strong><small>Watch available multiplayer games in real time.</small></span>
+          </button>
+          <button id="home-news-btn" class="home-discovery-card" type="button" data-target="analysis">
+            <span class="discovery-icon" aria-hidden="true">♜</span><span><strong>Game analysis</strong><small>Review positions and explore chess openings.</small></span>
+          </button>
+        </div>
+      </section>
+      <section class="home-feature-group" aria-labelledby="news-heading">
+        <h2 id="news-heading" class="home-section-title">Explore chess</h2>
+        <div class="home-discovery-grid">
+          <button id="home-openings-btn" class="home-discovery-card" type="button" data-target="opening-explorer">
+            <span class="discovery-icon" aria-hidden="true">♞</span><span><strong>Opening explorer</strong><small>Explore popular openings and move variations.</small></span>
+          </button>
+          <button id="home-friends-btn" class="home-discovery-card" type="button" data-target="friends">
+            <span class="discovery-icon" aria-hidden="true">♙</span><span><strong>Play with friends</strong><small>Connect to online games and find friends.</small></span>
+          </button>
+          <button id="home-tournament-btn" class="home-discovery-card" type="button" data-target="tournament-setup">
+            <span class="discovery-icon" aria-hidden="true">♛</span><span><strong>Chess events</strong><small>Join a local tournament and follow each round.</small></span>
+          </button>
+        </div>
+      </section>
+      <section class="home-feature-group home-app-promo" aria-labelledby="app-heading">
+        <h2 id="app-heading" class="home-section-title">Chess wherever you play</h2>
+        <p>Play on this device with local games, online matches, puzzles and training. No app download is needed to get started.</p>
+        <button id="home-app-play-btn" class="home-app-cta" type="button">Play in your browser</button>
+      </section>
+      <hr class="menu-divider">
+      <div class="menu-footer">Chess Club 88 · Standard 8×8 chess · Play online or offline</div>
+    </section>
+
+    <section id="setup" class="panel hidden">
+      <h2>Game Setup</h2>
+      <div class="setup-row">
+        <span id="mode-label">Mode</span>
+        <div class="mode-choice-group" role="radiogroup" aria-labelledby="mode-label">
+          <label class="mode-choice"><input type="radio" name="game-mode" value="2p" checked> 2-Player (Hotseat)</label>
+          <label class="mode-choice"><input type="radio" name="game-mode" value="ai"> Single-Player vs AI</label>
+        </div>
+        <select id="mode-select" class="visually-hidden" aria-hidden="true" tabindex="-1">
+          <option value="2p" selected>2-Player (Hotseat)</option>
+          <option value="ai">Single-Player vs AI</option>
+        </select>
+      </div>
+      <div class="setup-row hidden" id="ai-options">
+        <label for="difficulty-select">Difficulty</label>
+        <select id="difficulty-select">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="setup-row hidden" id="color-options">
+        <label for="color-select">Play as</label>
+        <select id="color-select">
+          <option value="white">White</option>
+          <option value="black">Black</option>
+        </select>
+      </div>
+      <div class="setup-row">
+        <label for="timer-select">Timer</label>
+        <select id="timer-select">
+          <option value="none">No limit</option>
+          <option value="180">3 minutes</option>
+          <option value="300">5 minutes</option>
+          <option value="600" selected>10 minutes</option>
+          <option value="1800">30 minutes</option>
+        </select>
+      </div>
+      <div class="setup-row">
+        <label for="theme-select">Board theme</label>
+        <select id="theme-select">
+          <option value="classic" selected>Classic Green</option>
+          <option value="ocean">Ocean Blue</option>
+          <option value="wood">Warm Wood</option>
+          <option value="midnight">Midnight</option>
+          <option value="slate">Slate Grey</option>
+        </select>
+      </div>
+      <button id="start-btn" type="button">Start Game</button>
+    </section>
+
+    <section id="puzzles" class="panel hidden">
+      <h2>Daily Puzzle</h2>
+      <div id="puzzle-info" class="section-info"></div>
+      <div id="puzzle-board" class="board" aria-label="Puzzle board"></div>
+      <div id="puzzle-score" class="section-info"></div>
+      <div id="puzzle-feedback" class="puzzle-feedback" role="status" aria-live="polite"></div>
+      <div class="controls">
+        <button id="puzzle-hint-btn" type="button">Hint</button>
+        <button id="puzzle-reset-btn" type="button">Reset</button>
+        <button id="puzzle-next-btn" type="button">Next Puzzle</button>
+        <button id="puzzle-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="training" class="panel hidden">
+      <h2>Training</h2>
+      <div class="setup-row">
+        <label for="training-skill-select">Skill</label>
+        <select id="training-skill-select"></select>
+      </div>
+      <div id="training-progress" class="section-info"></div>
+      <div id="training-info" class="section-info"></div>
+      <div id="training-board" class="board" aria-label="Training board"></div>
+      <div id="training-feedback" class="puzzle-feedback" role="status" aria-live="polite"></div>
+      <div class="controls">
+        <button id="training-hint-btn" type="button">Hint</button>
+        <button id="training-reset-btn" type="button">Reset</button>
+        <button id="training-next-btn" type="button">Next Exercise</button>
+        <button id="training-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="analysis" class="panel hidden">
+      <h2>Game Analysis</h2>
+      <div id="analysis-info" class="section-info">No completed game to analyze yet.</div>
+      <div id="analysis-board" class="board" aria-label="Analysis board"></div>
+      <div id="analysis-position" class="section-info"></div>
+      <div class="controls">
+        <button id="analysis-first-btn" type="button">|&lt;</button>
+        <button id="analysis-prev-btn" type="button">&lt;</button>
+        <button id="analysis-next-btn" type="button">&gt;</button>
+        <button id="analysis-last-btn" type="button">&gt;|</button>
+        <button id="analysis-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="opening-explorer" class="panel hidden">
+      <h2>Opening Explorer</h2>
+      <div class="opening-layout"><div><div id="opening-board" class="board" aria-label="Independent opening explorer board"></div><div id="opening-sequence" class="section-info" aria-live="polite"></div><div id="opening-suggestions" class="opening-suggestions" aria-label="Suggested continuations"></div></div>
+      <aside class="opening-side"><div id="opening-name" class="section-info" role="status" aria-live="polite">No recognized opening yet.</div><label for="opening-search">Search openings</label><input id="opening-search" type="text" placeholder="Name or move…"><div id="opening-results" class="opening-results" aria-label="Opening catalog results"></div><button id="opening-reset-btn" type="button">Reset exploration</button></aside></div>
+      <div class="controls"><button id="opening-back-btn" type="button">Back to Menu</button></div>
+    </section>
+
+    <section id="replay" class="panel hidden">
+      <h2>Replays &amp; Share</h2>
+      <div id="replay-info" class="section-info" role="status" aria-live="polite">Pick a saved game to replay.</div>
+      <div class="replay-layout">
+        <div id="replay-board" class="board" aria-label="Replay board"></div>
+        <div class="replay-side">
+          <div id="replay-list" class="replay-list"></div>
+          <div class="replay-import">
+            <input id="replay-pgn-file" type="file" accept=".pgn,text/plain" aria-label="Import PGN file">
+            <input id="replay-code-input" type="text" placeholder="Paste a share code…" aria-label="Share code">
+            <button id="replay-import-btn" type="button">Load Code</button>
+          </div>
+          <p id="replay-progress" class="section-info" aria-live="polite">Move 0 of 0</p>
+          <div class="controls">
+            <button id="replay-first-btn" type="button">|&lt;</button>
+            <button id="replay-prev-btn" type="button">&lt;</button>
+            <button id="replay-next-btn" type="button">&gt;</button>
+            <button id="replay-last-btn" type="button">&gt;|</button>
+          </div>
+          <div class="controls">
+            <button id="replay-back-to-list-btn" type="button" hidden>Back to List</button>
+            <button id="replay-back-btn" type="button">Back to Menu</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="panel hidden">
+      <h2>Achievements</h2>
+      <div id="achievements-info" class="section-info"></div>
+      <div id="achievements-list" class="ach-grid"></div>
+      <div class="controls">
+        <button id="achievements-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="settings" class="panel hidden">
+      <h2>Settings</h2>
+      <div class="setup-row">
+        <label for="ui-theme-select">Interface</label>
+        <select id="ui-theme-select">
+          <option value="dark" selected>Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </div>
+      <div class="setup-row">
+        <label for="board-theme-select">Board style</label>
+        <select id="board-theme-select">
+          <option value="classic" selected>Classic Green</option>
+          <option value="ocean">Ocean Blue</option>
+          <option value="wood">Warm Wood</option>
+          <option value="midnight">Midnight</option>
+          <option value="slate">Slate Grey</option>
+        </select>
+      </div>
+      <div class="setup-row">
+        <label for="piece-design-select">Piece design</label>
+        <select id="piece-design-select">
+          <option value="classic" selected>Classic Glyphs</option>
+          <option value="serif">Elegant Serif</option>
+          <option value="outline">Bold Outline</option>
+        </select>
+      </div>
+      <div id="settings-preview" class="board" aria-label="Theme preview"></div>
+      <div class="controls">
+        <button id="settings-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="spectator" class="panel hidden">
+      <h2>Spectator Mode</h2>
+      <div class="spectator-picker">
+        <div class="spectator-picker-head">
+          <h3>Live Games</h3>
+          <button id="spectator-refresh-btn" type="button">Refresh</button>
+        </div>
+        <div id="spectator-status" class="section-info" role="status" aria-live="polite">No live games right now.</div>
+        <div id="spectator-game-list" class="spectator-gamelist"></div>
+      </div>
+      <h3 id="spectator-title" class="spectator-title">Spectator Mode</h3>
+      <div class="spectator-layout">
+        <div class="spectator-main">
+          <div id="spectator-board" class="spectator-board empty" aria-label="Spectator chess board"></div>
+          <div id="spectator-replay-bar" class="spectator-replay-bar hidden">
+            <button id="spec-start-btn" type="button" aria-label="First move">|&lt;</button>
+            <button id="spec-prev-btn" type="button" aria-label="Previous move">&lt;</button>
+            <button id="spec-next-btn" type="button" aria-label="Next move">&gt;</button>
+            <button id="spec-live-btn" type="button">Live</button>
+          </div>
+        </div>
+        <aside class="spectator-side">
+          <div id="spectator-players"></div>
+          <div id="spectator-follow" class="spectator-follow-row">
+            <span class="spectator-follow-label">Board follows</span>
+            <button id="spec-follow-w" type="button">White</button>
+            <button id="spec-follow-b" type="button">Black</button>
+            <button id="spec-follow-both" type="button">Both</button>
+          </div>
+          <div id="spectator-captured" class="spectator-captured"></div>
+          <div id="spectator-moves" class="spectator-moves"></div>
+        </aside>
+      </div>
+      <div class="controls"><button id="spectator-back-btn" type="button">Back to Menu</button></div>
+    </section>
+
+    <section id="smart-review" class="panel hidden">
+      <h2>Smart Game Review</h2>
+      <div id="review-info" class="section-info" role="status" aria-live="polite"></div>
+      <div id="review-summary" class="section-info"></div>
+      <div class="review-layout">
+        <div id="review-board" class="board" aria-label="Reviewed chess board"></div>
+        <aside class="review-side">
+          <div id="review-verdict" class="section-info" role="status" aria-live="polite"></div>
+          <div class="controls">
+            <button id="review-first-btn" type="button">|&lt;</button>
+            <button id="review-prev-btn" type="button">Previous</button>
+            <button id="review-next-btn" type="button">Next</button>
+            <button id="review-last-btn" type="button">&gt;|</button>
+          </div>
+          <div id="review-list" class="review-list"></div>
+        </aside>
+      </div>
+      <div class="controls"><button id="review-back-btn" type="button">Back to Menu</button></div>
+    </section>
+
+    <section id="lobby" class="panel hidden">
+      <h2>Online Multiplayer</h2>
+      <div class="setup-row">
+        <label for="player-name-input">Your name</label>
+        <input id="player-name-input" type="text" maxlength="24" placeholder="Player">
+      </div>
+      <div class="controls" style="margin-bottom:16px">
+        <button id="create-room-btn" type="button">Create Room</button>
+      </div>
+      <div class="setup-row">
+        <label for="join-code-input">Room code</label>
+        <input id="join-code-input" type="text" maxlength="6" placeholder="e.g. K7QP2M" autocapitalize="characters">
+      </div>
+      <div class="controls" style="margin-bottom:16px">
+        <button id="join-room-btn" type="button">Join Room</button>
+      </div>
+      <div id="lobby-status" class="section-info" role="status" aria-live="polite">Enter a room code to join a friend, or create a room and share the code.</div>
+      <div id="lobby-room-info" class="section-info"></div>
+      <div class="setup-row hidden" id="lobby-timer-row">
+        <label for="lobby-timer-select">Timer</label>
+        <select id="lobby-timer-select">
+          <option value="none">No limit</option>
+          <option value="180">3 minutes</option>
+          <option value="300">5 minutes</option>
+          <option value="600" selected>10 minutes</option>
+          <option value="1800">30 minutes</option>
+        </select>
+      </div>
+      <div class="controls hidden" id="lobby-start-row">
+        <button id="lobby-start-btn" type="button">Start Game</button>
+      </div>
+      <div class="controls">
+        <button id="lobby-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="tournament-setup" class="panel hidden">
+      <h2>Tournament Setup</h2>
+      <div class="setup-row">
+        <label for="tour-size-select">Players</label>
+        <select id="tour-size-select">
+          <option value="4" selected>4 players</option>
+          <option value="8">8 players</option>
+        </select>
+      </div>
+      <div class="setup-row">
+        <label for="tour-name-input">Your name</label>
+        <input id="tour-name-input" type="text" maxlength="24" placeholder="You">
+      </div>
+      <div class="setup-row">
+        <label for="tour-opponent-select">Opponents</label>
+        <select id="tour-opponent-select">
+          <option value="ai" selected>AI opponents</option>
+          <option value="human">Local 2-player matches</option>
+        </select>
+      </div>
+      <div class="setup-row" id="tour-difficulty-row">
+        <label for="tour-difficulty-select">AI difficulty</label>
+        <select id="tour-difficulty-select">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="setup-row">
+        <label for="tour-timer-select">Time control</label>
+        <select id="tour-timer-select">
+          <option value="none">No limit</option>
+          <option value="300">5 minutes</option>
+          <option value="600" selected>10 minutes</option>
+          <option value="1800">30 minutes</option>
+        </select>
+      </div>
+      <div class="controls" style="margin-bottom:16px">
+        <button id="tour-create-btn" type="button">Create Tournament</button>
+        <button id="tour-resume-btn" type="button" class="hidden">Resume Tournament</button>
+      </div>
+      <div id="tour-setup-info" class="section-info" role="status" aria-live="polite">Opponent names are picked automatically.</div>
+      <div class="controls">
+        <button id="tour-setup-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="tournament-bracket" class="panel hidden">
+      <h2>Tournament Bracket</h2>
+      <div id="tour-bracket-head" class="section-info"></div>
+      <div id="tour-rounds" class="tour-rounds"></div>
+      <div class="controls">
+        <button id="tour-play-btn" type="button">Play Next Match</button>
+        <button id="tour-bracket-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="tournament-winner" class="panel hidden">
+      <h2>Tournament Complete</h2>
+      <div id="tour-winner-line" class="tour-winner"></div>
+      <div id="tour-winner-sub" class="section-info"></div>
+      <div class="controls">
+        <button id="tour-winner-again-btn" type="button">New Tournament</button>
+        <button id="tour-winner-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="friends" class="panel hidden">
+      <h2>Friends</h2>
+      <div id="friends-info" class="section-info" role="status" aria-live="polite">Add friends by player code.</div>
+      <div class="friends-me">
+        <span class="friends-me-label">Your player code:</span>
+        <code id="friends-my-code" class="replay-code">--------</code>
+        <button id="friends-copy-code-btn" type="button">Copy</button>
+      </div>
+      <div class="friends-add">
+        <input id="friend-code-input" type="text" placeholder="Player code (8 letters/digits)" aria-label="Player code" maxlength="16">
+        <input id="friend-name-input" type="text" placeholder="Name (optional)" aria-label="Friend name" maxlength="24">
+        <button id="friend-add-btn" type="button">Add Friend</button>
+      </div>
+      <input id="friends-search-input" type="text" class="friends-search" placeholder="Search friends…" aria-label="Search friends">
+      <div id="friends-list" class="friends-list"></div>
+      <div class="controls">
+        <button id="friends-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="leaderboard" class="panel hidden">
+      <h2>Leaderboard</h2>
+      <div id="leaderboard-info" class="section-info" role="status" aria-live="polite">Rankings by rating.</div>
+      <div class="leaderboard-scope controls">
+        <button id="lb-week-btn" type="button" class="lb-scope-btn active">This Week</button>
+        <button id="lb-all-btn" type="button" class="lb-scope-btn">All Time</button>
+      </div>
+      <table class="stats-table lb-table">
+        <thead>
+          <tr><th>#</th><th>Player</th><th id="lb-col-3">Points</th><th>Rating</th><th>W/L/D</th></tr>
+        </thead>
+        <tbody id="leaderboard-rows"></tbody>
+      </table>
+      <div class="controls">
+        <button id="leaderboard-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="stats" class="panel hidden">
+      <h2>Statistics</h2>
+      <div id="stats-body"></div>
+      <div class="controls">
+        <button id="stats-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="profile" class="panel hidden">
+      <h2>Player Profile</h2>
+      <div id="profile-body"></div>
+      <div class="controls">
+        <button id="profile-back-btn" type="button">Back to Menu</button>
+      </div>
+    </section>
+
+    <section id="game" class="panel hidden">
+      <div id="status" role="status" aria-live="polite">White to move</div>
+      <div id="turn-indicator" class="turn-indicator" role="status" aria-live="polite">White's turn</div>
+      <button id="game-review-btn" class="hidden" type="button">Review Game</button>
+      <div id="connection-status" class="connection-status hidden" role="status" aria-live="polite"></div>
+      <div id="player-names" class="player-names hidden">
+        <span id="name-white"></span><span id="vs-sep"> vs </span><span id="name-black"></span>
+      </div>
+      <div class="game-layout">
+        <div id="board" class="board" aria-label="Chess board"></div>
+        <aside class="side">
+          <div class="timers">
+            <div id="timer-white" class="timer">White 10:00</div>
+            <div id="timer-black" class="timer">Black 10:00</div>
+          </div>
+          <div id="captured-white" class="captured" aria-label="Captured by White"></div>
+          <div id="captured-black" class="captured" aria-label="Captured by Black"></div>
+          <section class="game-opening-panel" aria-label="Opening recognition">
+            <h3>Opening</h3>
+            <div id="game-opening-info" role="status">Opening not in catalog</div>
+            <div id="game-opening-suggestions" class="opening-live-suggestions"></div>
+            <button id="game-opening-explore-btn" type="button">Explore this position</button>
+          </section>
+          <ol id="move-list" aria-label="Move history"></ol>
+          <div class="controls">
+            <button id="undo-btn" type="button" disabled>Undo</button>
+            <button id="restart-btn" type="button">Restart</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="src/tournament/tournamentBoot.js"></script>
+  <script type="module" src="src/training/trainingBoot.js"></script>
+  <script type="module" src="src/friends/friendsBoot.js"></script>
+  <script type="module" src="src/leaderboard/leaderboardBoot.js"></script>
+  <script type="module" src="src/ui/spectatorBoot.js"></script>
+  <script src="src/ui/spectator-screen.js"></script>
+  <script src="src/openings/opening-explorer.js"></script>
+  <script src="chess-core.js"></script>
+  <script src="src/ui/ai-search.js"></script>
+  <script src="share-code.js"></script>
+  <script src="pgn.js"></script>
+  <script src="src/ui/replay-position.js"></script>
+  <script src="multiplayer.js"></script>
+  <script src="app.js"></script>
+  <!-- yantra-support-widget:start -->
+  <script src="https://www.yantraaicofounder.com/api/external/ticketing/widget.js" data-api-key="ytk_XXyAKvu-P37OZttIPD1DFlgWwdncbP_4kDFTKFbvkoHe3bGw" defer></script>
+  <!-- yantra-support-widget:end -->
+</body>
+</html>

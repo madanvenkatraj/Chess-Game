@@ -1,0 +1,30 @@
+{
+  "name": "complete-chess-game-standard-88",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node server/entry.js",
+    "start": "node server/entry.js",
+    "build": "npm run build:ai-worker",
+    "build:ai-worker": "vite build --config vite.ai-worker.config.mts",
+    "lint": "node --check server/entry.js && node --check client/app.js",
+    "check": "node -e \"const fs=require('fs');JSON.parse(fs.readFileSync('package.json','utf8'));const h=fs.readFileSync('client/index.html','utf8');if(!h.includes('</html>'))throw new Error('client/index.html is truncated');if(!h.includes('app.js'))throw new Error('client/index.html does not load app.js');if(!fs.existsSync('client/src/ui/ai.worker.js')||!fs.existsSync('client/src/ai/ai.worker.ts')||!fs.readFileSync('client/src/ai/aiClient.ts','utf8').includes('/src/ai/ai.worker.bundle.js'))throw new Error('client worker entry mismatch');if(!fs.existsSync('server/entry.js'))throw new Error('server entrypoint missing');if(!fs.existsSync('client/app.js')||!fs.existsSync('client/styles.css')||!fs.existsSync('server/main.js')||!fs.existsSync('server/roomServer.js'))throw new Error('frontend or backend files missing');for(const p of ['index.html','app.js','styles.css','src'])if(fs.existsSync(p))throw new Error('frontend file remains at root: '+p);console.log('check ok')\"",
+    "test": "node --test test/smoke.test.js test/roomServer.test.js && vitest run --exclude test/smoke.test.js --exclude test/roomServer.test.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@vitejs/plugin-react": "^6.1.1",
+    "http-proxy": "^1.18.1",
+    "jsdom": "^30.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.2"
+  },
+  "dependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}

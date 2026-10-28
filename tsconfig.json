@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@engine/*": ["./client/src/engine/*"],
+      "@state/*": ["./client/src/state/*"],
+      "@persistence/*": ["./client/src/persistence/*"],
+      "@ui/*": ["./client/src/ui/*"],
+      "@test/*": ["./test/*"]
+    }
+  },
+  "include": ["client/src", "test"],
+  "exclude": ["node_modules", "dist", "client/src/components/generated"]
+}
